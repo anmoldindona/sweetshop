@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sweetshop</title>
+    <style>
+        header{
+            width: 100%;
+            height: 50px;
+            border-width: 1px;
+            border-style: solid;
+            float: left;
+            box-sizing: border-box;
+            padding: 6px;
+        }
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        #brandname{
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+            float: left;
+            margin-left: 24px;
+        }
+        #tag_line{
+            float: right;
+            padding: 0;
+            margin: 0;
+            margin-top: 10px;
+            font-family: century gothic;
+            margin-right: 24px;
+
+        }
+        nav{
+            width: 100%;
+            height: 106px;
+            background-color: blue;
+            float: left;
+            box-sizing: border-box;
+            padding: 30px;
+        }
+        #search{
+              width: 400px;
+              height: 40px;
+              float: left;
+              box-sizing: border-box;
+              border: none;
+              font-size: 16px;
+              padding: 10px;
+        }
+        #search-btn{
+            width: 100px;
+            height: 40px;
+            box-sizing: border-box;
+            float: left;
+            border: none;
+            margin-left: 3px;
+            font-size: 16px;
+            
+
+        }
+        #menu_table{
+            width: 600px;
+            height: 40px;
+            float: right;
+            box-sizing: border-box;
+
+        }
+        #menu_item{
+            background-color: white;
+            width: 20%;
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        section{
+            width: 100%;
+            height: 1680px;
+            box-sizing: border-box;
+            float: left;
+            border-color: black;
+            border-width: 1px;
+            border-style: solid;
+            padding: 30px;
+        }
+        #venue{
+            float: left;
+        }
+        #phone{
+            float: right;
+        }
+        #popular-sweets-box{
+            width: 720px;
+            height: 550px;
+            box-sizing: border-box;
+            float: left;
+            background-color: black;
+            margin-top: 30px;
+            padding: 25px;
+        }
+        #popular-sweets-tagline{
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #popular-sweet-images{
+            width: 300px;
+            height: 200px;
+            margin: 15px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: white;
+            box-sizing: border-box;
+        }
+        #rate_list_box{
+            width: 450px;
+            height: 550px;
+            float: right;
+            box-sizing: border-box;
+            margin-top: 30px;
+           
+        }
+      #rate_header{
+
+        height: 50px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        width: 50%;
+        font-family: century gothic;
+        font-size: 25px;
+      }
+      #rate_content{
+        background-color: blue;
+      }
+      #s_name{
+        font-family: century gothic;
+        color: white;
+        font-size: 22px;
+        padding: 10px;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: white;
+      }
+      #rate{
+        list-style: none;
+      }
+      fieldset{
+        width: 690px;
+        height: 600px;
+        float: left;
+        margin-top: 50px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #ccc;
+        padding: 10px;
+      }
+      legend{
+        font-family: century gothic;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      #order_online{
+        font-size: 20px;
+        font-family: sans-serif;
+      }
+      #order_input{
+        width: 100%;
+        height: 35px;
+        box-sizing: border-box;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #ccc;
+        margin-top: 5px;
+      }
+      textarea{
+        width: 100%;
+        height: 100px;
+        box-sizing: border-box;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #ccc;
+    }
+    #submit_btn{
+        padding: 10px;
+        font-size: 15px;
+        float: right;
+        margin: 10px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #ccc;
+        background-color: white;
+    }
+    #abt_us{
+        width: 450px;
+        height: 600px;
+        box-sizing: border-box;
+        float: right;
+        margin-top: 66px;
+        border-style: solid;
+        border-color: #ccc;
+        background-color: white;
+        padding: 20px;
+
+      }
+      #abt_title{
+        text-align: center;
+        font-family: century gothic;
+        font-size: 30px;
+      }
+      #abt_text{
+        text-align: justify;
+        font-family: sans-serif;
+        line-height: 25px;
+      }
+      #m_sweets{
+        float: left;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+      }
+      #more_sweets{
+        text-align: center;
+        font-family: century gothic;
+        font-size: 30px;
+      }
+      #sweets{
+        width: 220px;
+        height: 250px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #ccc;
+        margin-right: 42px;
+        float: left;
+        margin-bottom: 30px;
+      }
+        
+        #sweets_end{
+        width: 220px;
+        height: 250px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #ccc;
+        
+        float: left;
+        
+      }
+      #sweet_pic{
+        width: 180px;
+        height: 150px;
+        margin: 15px;
+      }
+      #buy_btn{
+        text-align: center;
+        padding: 10px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #ccc;
+        width: 100px;
+        background-color: white;
+      }
+      footer{
+        width: 100%;
+        height: 250px;
+        box-sizing: border-box;
+        float: left;
+        background-color: black;
+      }
+       #contactus{
+            width: 300px;
+            height: 250px;
+            box-sizing: border-box;
+            float: left;
+            
+        
+        padding: 10px;
+        padding-left: 30px;
+       }
+       #sociallink{
+        width: 400px;
+        height: 250px;
+        box-sizing: border-box;
+        float: right;
+        
+    
+       }
+      #contact_title{
+        color: white;
+        font-family: sans-serif;
+        font-weight: normal;
+      }
+      #contact_details{
+        color: white;
+        font-size: 20px;
+        font-family: sans-serif;
+        font-style: normal;
+        margin-bottom: 10px;
+      }
+      #social_logo{
+        width: 60px;
+      }
+      #developer{
+       
+        float: left;
+        color: white;
+        font-family: century gothic;
+        margin-top: 200px;
+        margin-left: 210px;
+        font-size: 20px;
+        font-weight: bold;
+        font-style: italic;
+      }
+    </style>
+</head>
+<body>
+    <header>
+      <h1 id="brandname">Sweetshop.com</h1>
+      <p id="tag_line">The world's largest sweets and bakeries shop</p>
+
+    </header>
+    <nav>
+      <form action="">
+        <input type="search" name="search" placeholder="search your sweets here" id="search">
+        <input type="submit" id="search-btn" name="submit" value="search">
+      </form>
+      <table id="menu_table">
+        <tr>
+            <td id="menu_item"><a href="index.html">Home</a></td>
+            <td id="menu_item"><a href="sweets.html">Sweets</a></td>
+            <td id="menu_item"><a href="#">Bakeries</a></td>
+            <td id="menu_item"><a href="#abt_us">About Us</a></td>
+            <td id="menu_item"><a href=" #contactus">Contact Us</a></td>
+        </tr>
+      </table>
+    </nav>
+    <section>
+      
+       
+       <div id="m_sweets">
+        <h1 id="more_sweets">More Sweets</h1>
+       </div>
+       <div id="sweets">
+        <img src="/images/e.jpg" alt="" id="sweet_pic">
+        <center>
+          <a href="index.html#frm_box"><button id="buy_btn">Buy Now</button></a>
+        </center>
+       </div>
+       <div id="sweets">
+        <img src="/images/f.jpg" alt="" id="sweet_pic">
+        <center>
+            <a href="index.html#frm_box"><button id="buy_btn">Buy Now</button></a>
+          </center>
+       </div>
+       <div id="sweets">
+        <img src="/images/g.jpg" alt="" id="sweet_pic">
+        <center>
+            <a href="index.html#frm_box"><button id="buy_btn">Buy Now</button></a>
+          </center>
+       </div>
+       <div id="sweets">
+        <img src="/images/h.jpeg" alt="" id="sweet_pic">
+        <center>
+            <a href="index.html#frm_box"><button id="buy_btn">Buy Now</button></a>
+          </center>
+       </div>
+       <div id="sweets_end">
+        <img src="/images/i.jpg" alt="" id="sweet_pic">
+        <center>
+            <a href="index.html#frm_box"><button id="buy_btn">Buy Now</button></a>
+          </center>
+       </div>
+      </div>
+      <div id="sweets">
+       <img src="/images/e.jpg" alt="" id="sweet_pic">
+       <center>
+         <a href="#frm_box"><button id="buy_btn">Buy Now</button></a>
+       </center>
+      </div>
+      <div id="sweets">
+       <img src="/images/f.jpg" alt="" id="sweet_pic">
+       <center>
+           <a href="index.html#frm_box"><button id="buy_btn">Buy Now</button></a>
+         </center>
+      </div>
+      <div id="sweets">
+       <img src="/images/g.jpg" alt="" id="sweet_pic">
+       <center>
+           <a href="index.html#frm_box"><button id="buy_btn">Buy Now</button></a>
+         </center>
+      </div>
+      <div id="sweets">
+       <img src="/images/h.jpeg" alt="" id="sweet_pic">
+       <center>
+           <a href="#frm_box"><button id="buy_btn">Buy Now</button></a>
+         </center>
+      </div>
+      <div id="sweets_end">
+       <img src="/images/i.jpg" alt="" id="sweet_pic">
+       <center>
+           <a href="index.html#frm_box"><button id="buy_btn">Buy Now</button></a>
+         </center>
+      </div>
+    </div>
+    <div id="sweets">
+     <img src="/images/e.jpg" alt="" id="sweet_pic">
+     <center>
+       <a href="#frm_box"><button id="buy_btn">Buy Now</button></a>
+     </center>
+    </div>
+    <div id="sweets">
+     <img src="/images/f.jpg" alt="" id="sweet_pic">
+     <center>
+         <a href="#frm_box"><button id="buy_btn">Buy Now</button></a>
+       </center>
+    </div>
+    <div id="sweets">
+     <img src="/images/g.jpg" alt="" id="sweet_pic">
+     <center>
+         <a href="index.html#frm_box"><button id="buy_btn">Buy Now</button></a>
+       </center>
+    </div>
+    <div id="sweets">
+     <img src="/images/h.jpeg" alt="" id="sweet_pic">
+     <center>
+         <a href="#frm_box"><button id="buy_btn">Buy Now</button></a>
+       </center>
+    </div>
+    <div id="sweets_end">
+     <img src="/images/i.jpg" alt="" id="sweet_pic">
+     <center>
+         <a href="#frm_box"><button id="buy_btn">Buy Now</button></a>
+       </center>
+    </div>
+  </div>
+  <div id="sweets">
+   <img src="/images/e.jpg" alt="" id="sweet_pic">
+   <center>
+     <a href="#frm_box"><button id="buy_btn">Buy Now</button></a>
+   </center>
+  </div>
+  <div id="sweets">
+   <img src="/images/f.jpg" alt="" id="sweet_pic">
+   <center>
+       <a href="index.html#frm_box"><button id="buy_btn">Buy Now</button></a>
+     </center>
+  </div>
+  <div id="sweets">
+   <img src="/images/g.jpg" alt="" id="sweet_pic">
+   <center>
+       <a href="#frm_box"><button id="buy_btn">Buy Now</button></a>
+     </center>
+  </div>
+  <div id="sweets">
+   <img src="/images/h.jpeg" alt="" id="sweet_pic">
+   <center>
+       <a href="#frm_box"><button id="buy_btn">Buy Now</button></a>
+     </center>
+  </div>
+  <div id="sweets_end">
+   <img src="/images/i.jpg" alt="" id="sweet_pic">
+   <center>
+       <a href="index.html#frm_box"><button id="buy_btn">Buy Now</button></a>
+     </center>
+  </div>
+</div>
+<div id="sweets">
+ <img src="/images/e.jpg" alt="" id="sweet_pic">
+ <center>
+   <a href="index.html#frm_box"><button id="buy_btn">Buy Now</button></a>
+ </center>
+</div>
+<div id="sweets">
+ <img src="/images/f.jpg" alt="" id="sweet_pic">
+ <center>
+     <a href="#frm_box"><button id="buy_btn">Buy Now</button></a>
+   </center>
+</div>
+<div id="sweets">
+ <img src="/images/g.jpg" alt="" id="sweet_pic">
+ <center>
+     <a href="index.html#frm_box"><button id="buy_btn">Buy Now</button></a>
+   </center>
+</div>
+<div id="sweets">
+ <img src="/images/h.jpeg" alt="" id="sweet_pic">
+ <center>
+     <a href="#frm_box"><button id="buy_btn">Buy Now</button></a>
+   </center>
+</div>
+<div id="sweets_end">
+ <img src="/images/i.jpg" alt="" id="sweet_pic">
+ <center>
+     <a href="index.html#frm_box"><button id="buy_btn">Buy Now</button></a>
+   </center>
+</div>
+
+    </section>
+    <footer>
+    <div id="contactus">
+        <h1 id="contact_title">Contact Us</h1>
+        <address id="contact_details">
+            Website : Sweetshop.com
+        </address>
+        <address id="contact_details">
+            Phone NO : +91 9998979692
+        </address>
+        <address id="contact_details">
+            Email : abchg654@gmail.com
+        </address>
+        <address id="contact_details">
+            Address : Pritampura New Delhi-110008
+        </address>
+    </div>
+    <div id="developer">
+        Developed by : Anmol
+    </div>
+    <div id="sociallink">
+        <h1 id="contact_title">Follow Us</h1>
+        <a href="https://www.instagram.com/silent_boy_0_0_?igsh=MW1sM2hydWtkZnJrbg=="><img src="/images/facebook.jpg" alt="" id="social_logo"></a>
+        <a href="https://www.instagram.com/silent_boy_0_0_?igsh=MW1sM2hydWtkZnJrbg=="><img src="/images/linkedin.jpg" alt="" id="social_logo"></a>
+        <a href="https://www.instagram.com/silent_boy_0_0_?igsh=MW1sM2hydWtkZnJrbg=="><img src="/images/Instagram.webp" alt="" id="social_logo"></a>
+    </div>
+
+    </footer>
+</body>
+</html>
